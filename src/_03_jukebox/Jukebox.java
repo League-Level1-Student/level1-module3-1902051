@@ -27,7 +27,11 @@ public class Jukebox implements Runnable {
 		// 1. Find an mp3 on your computer or on the Internet.
 		// 2. Create a Song object for that mp3
 
-		// 3. Plahy the Song
+String ears = "418839 sapisvr__n-o-t-i-f-y-c-a-r (2).wav" ;
+Song song = new Song(ears);
+
+
+// 3. Play the Song
 
 		/*
 		 * 4. Create a user interface for your Jukebox so that the user can to
