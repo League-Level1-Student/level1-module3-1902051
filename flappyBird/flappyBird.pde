@@ -1,5 +1,7 @@
 void draw() {
   if (isPlaying == true) {
+    text("Your Score is:", 70, 7);
+
 
     background(111, 60, 137);
     fill(139, 64, 96);    
@@ -35,7 +37,7 @@ int y;
 int birdYVelocity = 1;        
 int gravity = 1;  
 int upperPipeHeight = 666;
-int pipeGap = 51;
+int pipeGap =  200;
 int lowerY = upperPipeHeight + pipeGap;
 void mousePressed() {       
   birdYVelocity = -13;
