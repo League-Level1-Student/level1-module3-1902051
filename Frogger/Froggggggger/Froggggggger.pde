@@ -8,7 +8,8 @@
  Car car8 = new Car(751,577,200,400);
  Car car9 = new Car(787,432,200,400);
  Car car10 = new Car(211,782,200,400);
-
+Car car11 = new Car(24,30,200,400);
+Car car12 = new Car(20,700,200,400);
 
 
 void setup() {
@@ -75,24 +76,44 @@ void draw() {
   car8.display();
   car9.display();
   car10.display();
-
+  car11.display();
+  car12.display();
 
 
 }
+boolean intersects(Car car) {
+ if ((y > car.getY() && y < car.getY()+50) &&
+                (x > car.getX() && x < car.getX()+car.getSize())) {
+   return true;
+  }
+ else  {
+  return false;
+ } 
+ }
+ 
 class Car {
-  int carx = 400;
-  int cary= 400;
-  int sizecar = 400;
-  int carvolocity= 400;
-  public Car (int carx, int cary, int sizecar, int carvolocity){
-  this.carx=carx;
-  this.cary=cary;
-  this.sizecar=sizecar;
-  this.carvolocity=carvolocity;
+  int x = 400;
+  int y= 400;
+  int size = 400;
+  int volocity= 400;
+  public Car (int x, int y, int size, int volocity){
+  this.x=x;
+  this.y= y;
+  this.size = size;
+  this.volocity= volocity;
+}
+int getX(){
+return x;  
+}
+int getY(){
+ return y; 
+}
+int getSize(){
+ return size; 
 }
 void display()
   {
     fill(0,255,0);
-    rect(carx , cary,  sizecar, 50);
+    rect(x , y,  size, 50);
   }
 }

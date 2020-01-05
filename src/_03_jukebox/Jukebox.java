@@ -4,7 +4,7 @@ package _03_jukebox;
  *    Level 1
  */
 
-
+ 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -27,8 +27,8 @@ public class Jukebox implements Runnable {
 		// 1. Find an mp3 on your computer or on the Internet.
 		// 2. Create a Song object for that mp3
 
-String ears = "418839 sapisvr__n-o-t-i-f-y-c-a-r (2).wav" ;
-Song song = new Song(ears);
+String ears = "Drake - Hotline Bling (Joker's EARRAPE Remix).mp3" ;
+Song song = new Song (ears);
 
 
 // 3. Play the Song
