@@ -12,7 +12,11 @@ import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.player.advanced.AdvancedPlayer;
@@ -29,7 +33,7 @@ public class Jukebox implements Runnable {
 
 String ears = "Drake - Hotline Bling (Joker's EARRAPE Remix).mp3" ;
 Song song = new Song (ears);
-
+song.play();
 
 // 3. Play the Song
 
@@ -40,6 +44,17 @@ Song song = new Song (ears);
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
+JButton hotline_Bling  = new JButton();
+JFrame frame = new JFrame();
+JPanel panel = new JPanel();
+
+frame.add(panel);
+panel.add(hotline_Bling);
+frame.setVisible(true);
+frame.pack();
+
+hotline_Bling.setText("Drake - Hotline Bling");
+    
     }
     
     
