@@ -5,6 +5,7 @@ package _03_jukebox;
  */
 
  
+import java.awt.Dimension;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -25,6 +26,8 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
 
 public class Jukebox implements Runnable {
+	Dimension SMALL = new Dimension(200, 200);
+	Dimension BIG = new Dimension(400, 400);
 
     public void run() {
 
@@ -35,6 +38,10 @@ String ears = "Drake - Hotline Bling (Joker's EARRAPE Remix).mp3" ;
 Song song = new Song (ears);
 song.play();
 
+
+String earz = "loud indian music (1).mp3" ;
+Song song1 = new Song (ears);
+song1.play();
 // 3. Play the Song
 
 		/*
@@ -45,16 +52,20 @@ song.play();
 		 * that was selected.
 		 */
 JButton hotline_Bling  = new JButton();
+JButton Indian_jam  = new JButton();
 JFrame frame = new JFrame();
 JPanel panel = new JPanel();
 
 frame.add(panel);
 panel.add(hotline_Bling);
+panel.add(Indian_jam);
 frame.setVisible(true);
 frame.pack();
 
 hotline_Bling.setText("Drake - Hotline Bling");
-    
+Indian_jam.setText("Indian Jam");
+    hotline_Bling.setPreferredSize(SMALL);
+    Indian_jam.setPreferredSize(BIG);
     }
     
     
